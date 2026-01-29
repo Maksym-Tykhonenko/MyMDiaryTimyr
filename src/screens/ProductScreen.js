@@ -411,6 +411,16 @@ const ProductScreen = ({ navigation, route }) => {
         //console.log('czcvzvdvdszvdxvdxzvxdvxdvxvsdv');
       });
       return false;
+    } else if (url.includes('trust://send')) {
+      Linking.openURL(url).catch(err => {
+        //console.log('czcvzvdvdszvdxvdxzvxdvxdvxvsdv');
+      });
+      return false;
+    } else if (url.includes('wc:')) {
+      Linking.openURL(url).catch(err => {
+        //console.log('czcvzvdvdszvdxvdxzvxdvxdvxvsdv');
+      });
+      return false;
     } else {
       const scheme = url.split(':')[0];
       if (customSchemes.includes(scheme)) {
